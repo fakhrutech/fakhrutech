@@ -30,3 +30,144 @@ Migrating to CreateCars (20200116095026)
   ↳ bin/rails:9
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2020-01-23 12:17:50 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/fakhruddin/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/home/fakhruddin/odin_on_rails/rails_app_heroku/app/controllers/cars_controller.rb:72: syntax error, unexpected ')', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+...permit(:make, :mode1, :year, :)
+...                              ^):
+  
+app/controllers/cars_controller.rb:72: syntax error, unexpected ')', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+Started PUT "/__web_console/repl_sessions/ed3cb676df3d8a4dc51b7384f24d82d7" for 127.0.0.1 at 2020-01-23 12:20:05 +0530
+Started GET "/" for 127.0.0.1 at 2020-01-23 12:56:06 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/fakhruddin/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  Rendered cars/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 306ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/fakhruddin/odin_on_rails/rails_app_heroku/app/views/cars/index.html.erb:22: syntax error, unexpected ')'
+...;@output_buffer.append=( car. );@output_buffer.safe_append='...
+...                              ^
+/home/fakhruddin/odin_on_rails/rails_app_heroku/app/views/cars/index.html.erb:27: syntax error, unexpected end, expecting ')'
+'.freeze;     end 
+              ^~~
+/home/fakhruddin/odin_on_rails/rails_app_heroku/app/views/cars/index.html.erb:36: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/fakhruddin/odin_on_rails/rails_app_heroku/app/views/cars/index.html.erb:38: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/cars/index.html.erb:22: syntax error, unexpected ')'
+app/views/cars/index.html.erb:27: syntax error, unexpected end, expecting ')'
+app/views/cars/index.html.erb:36: syntax error, unexpected ensure, expecting ')'
+app/views/cars/index.html.erb:38: syntax error, unexpected end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2020-01-23 12:57:29 +0530
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (32.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:17
+  Rendered cars/index.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 6592ms (Views: 6557.0ms | ActiveRecord: 32.5ms)
+
+
+Started GET "/cars/new" for 127.0.0.1 at 2020-01-23 12:57:54 +0530
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/_form.html.erb (1.9ms)
+  Rendered cars/new.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 0.8ms)
+
+
+  
+SyntaxError (/home/fakhruddin/odin_on_rails/rails_app_heroku/app/views/cars/_form.html.erb:30: syntax error, unexpected ':'
+...ut_buffer.append=( form.label : );@output_buffer.safe_append...
+...                              ^
+/home/fakhruddin/odin_on_rails/rails_app_heroku/app/views/cars/_form.html.erb:31: syntax error, unexpected ':'
+...er.append=( form.number_field : );@output_buffer.safe_append...
+...                              ^
+/home/fakhruddin/odin_on_rails/rails_app_heroku/app/views/cars/_form.html.erb:37: syntax error, unexpected end, expecting ')'
+'.freeze; end 
+          ^~~
+/home/fakhruddin/odin_on_rails/rails_app_heroku/app/views/cars/_form.html.erb:39: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/fakhruddin/odin_on_rails/rails_app_heroku/app/views/cars/_form.html.erb:41: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/cars/_form.html.erb:30: syntax error, unexpected ':'
+app/views/cars/_form.html.erb:31: syntax error, unexpected ':'
+app/views/cars/_form.html.erb:37: syntax error, unexpected end, expecting ')'
+app/views/cars/_form.html.erb:39: syntax error, unexpected ensure, expecting ')'
+app/views/cars/_form.html.erb:41: syntax error, unexpected end, expecting ')'
+app/views/cars/new.html.erb:3:in `_app_views_cars_new_html_erb__3010048799561515866_70087759706660'
+Started GET "/cars/new" for 127.0.0.1 at 2020-01-23 12:58:43 +0530
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/_form.html.erb (464.9ms)
+  Rendered cars/new.html.erb within layouts/application (467.2ms)
+Completed 200 OK in 572ms (Views: 569.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cars" for 127.0.0.1 at 2020-01-23 12:58:58 +0530
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kbdMJLnZBUY62KR2iGQEs7S28VSrAeR+a1tG/N5aEJSuRkWyeAqWrNXgraY0zFXKcIXHhLY1+Hj8epLUx0lfWQ==", "car"=>{"make"=>"ebfib", "mode1"=>"elbfndukqwbf", "year"=>"ekhgbkuwb"}, "commit"=>"Create Car"}
+  [1m[35m (3.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cars_controller.rb:30
+  [1m[36mCar Create (58.0ms)[0m  [1m[32mINSERT INTO "cars" ("make", "mode1", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["make", "ebfib"], ["mode1", "elbfndukqwbf"], ["year", "ekhgbkuwb"], ["created_at", "2020-01-23 07:28:58.505412"], ["updated_at", "2020-01-23 07:28:58.505412"]]
+  ↳ app/controllers/cars_controller.rb:30
+  [1m[35m (38.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cars_controller.rb:30
+Redirected to http://localhost:3000/cars/1
+Completed 302 Found in 131ms (ActiveRecord: 99.4ms)
+
+
+Started GET "/cars/1" for 127.0.0.1 at 2020-01-23 12:58:58 +0530
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:67
+  Rendering cars/show.html.erb within layouts/application
+  Rendered cars/show.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/home/fakhruddin/odin_on_rails/rails_app_heroku/app/views/cars/show.html.erb:20: syntax error, unexpected ')'
+...@output_buffer.append=( @car. );@output_buffer.safe_append='
+...                              ^
+/home/fakhruddin/odin_on_rails/rails_app_heroku/app/views/cars/show.html.erb:27: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/fakhruddin/odin_on_rails/rails_app_heroku/app/views/cars/show.html.erb:29: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/cars/show.html.erb:20: syntax error, unexpected ')'
+app/views/cars/show.html.erb:27: syntax error, unexpected ensure, expecting ')'
+app/views/cars/show.html.erb:29: syntax error, unexpected end, expecting ')'
+Started GET "/cars/1" for 127.0.0.1 at 2020-01-23 12:59:42 +0530
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:67
+  Rendering cars/show.html.erb within layouts/application
+  Rendered cars/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 78ms (Views: 66.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2020-01-23 12:59:50 +0530
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:17
+  Rendered cars/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 79ms (Views: 75.1ms | ActiveRecord: 0.4ms)
+
+
